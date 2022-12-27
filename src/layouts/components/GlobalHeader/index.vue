@@ -1,3 +1,7 @@
 <template>
-  <h1>头部</h1>
+  <MenuCollapse />
 </template>
+
+<script setup lang="ts">
+import { MenuCollapse } from './components'
+</script>

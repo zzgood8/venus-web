@@ -1,7 +1,7 @@
 <template>
   <n-layout has-sider class="h-full">
     <!-- 侧边栏 -->
-    <n-layout-sider content-style="padding: 4px;">
+    <n-layout-sider width="220">
       <AppLogo />
       <GlobalSider />
     </n-layout-sider>
@@ -22,4 +22,3 @@
 <script setup lang="ts">
 import { GlobalContent, GlobalHeader, GlobalSider, GlobalTab } from '@/layouts/components'
 </script>
-
