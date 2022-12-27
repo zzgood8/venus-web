@@ -4,6 +4,8 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 import { resolve } from 'path'
+import Icons from 'unplugin-icons/vite'
+import IconsResolver from 'unplugin-icons/resolver'
 
 const pathResolve = (dir: string): any => {
   return resolve(__dirname, '.', dir)
@@ -23,8 +25,12 @@ export default defineConfig({
       dts: './src/types/auto-imports.d.ts'
     }),
     Components({
-      resolvers: [NaiveUiResolver()],
+      resolvers: [NaiveUiResolver(), IconsResolver()],
       dts: './src/types/components.d.ts'
+    }),
+    Icons({
+      compiler: 'vue3',
+      autoInstall: true
     })
   ],
   server: {

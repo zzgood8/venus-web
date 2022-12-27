@@ -1,8 +1,16 @@
 <template>
-  <ul>
-    <li>系统管理</li>
-    <li>用户设置</li>
-    <li>视图管理</li>
-    <li>路由菜单</li>
-  </ul>
+  <n-menu :options="menuOptions" />
 </template>
+
+<script setup lang="ts">
+import type { MenuOption } from 'naive-ui'
+import { renderIcon } from '@/utils/common'
+
+const menuOptions: MenuOption[] = [
+  {
+    label: '仪表盘',
+    key: 'dashBoard',
+    icon: renderIcon('icon-park:ad')
+  }
+]
+</script>
